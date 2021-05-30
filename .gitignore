@@ -5,9 +5,7 @@ HELP.md
 !gradle/wrapper/gradle-wrapper.jar
 greenribbon-service/src/main/generated/*
 */build/*
-greenribbon-web/src/front/build/*
-greenribbon-web/src/main/resources/static/*
-greenribbon-web/out/*
+
 ### STS ###
 .apt_generated
 .classpath
