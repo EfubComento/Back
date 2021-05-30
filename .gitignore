@@ -1,0 +1,36 @@
+HELP.md
+.gradle
+*.xml
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+greenribbon-service/src/main/generated/*
+*/build/*
+greenribbon-web/src/front/build/*
+greenribbon-web/src/main/resources/static/*
+greenribbon-web/out/*
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+*.bin
+*.class
+/out/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
