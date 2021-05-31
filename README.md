@@ -3,6 +3,37 @@
 
 # API 명세
 
+## 답변
+### 조회
+### REQUEST
+URL
+<pre>
+<code>
+GET /api/answer/{id}
+</code>
+</pre>
+
+### RESPONSE
+Key
+|Name|Type|Description|
+|------|---|---|
+|id|INTEGER|캠프번호|
+|company|STRING|회사|
+|content|STRING|내용|
+|question_id|STRING|질문아이디|
+
+<pre>
+<code>
+{
+   "id":1,
+   "company":"삼성전기",
+   "content":"한두달도 안된 동일 전형이라면 필터링 될 확률이 높습니다. 인사담당자가 동일하기 때문에 분명히 기억할 겁니다.",
+   "question_id":"1"
+}
+</code>
+</pre>
+
+
 ## 부트캠프
 ### 조회
 ### REQUEST
