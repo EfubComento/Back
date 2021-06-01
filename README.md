@@ -50,10 +50,56 @@ GET /api/post
 </code>
 </pre>
 
-## 답변
+### 개별 포스트 불러옴
+### REQUEST
+URL
+<pre>
+<code>
+GET /api/post/{id}
+</code>
+</pre>
+
+### RESPONSE
+<pre>
+<code>
+ {
+      "id":1,
+      "company":"삼성전기",
+      "content": "한두달도 안된 동일 전형이라면 필터링 될 확률이 높습니다.
+ 인사담당자가 동일하기 때문에 분명히 기억할 겁니다.",
+      "question_content": "~~~",
+      "question_id":1,
+      "answer":[
+          {
+              "answer_id":1,
+     "answer_content:"~~~",
+          },
+          {
+              "answer_id":2,
+     "answer_content:"~~~",
+          }
+      ]
+   }
+</pre>
+</code>
+
+## 질문
 ### 전체조회
 ### REQUEST
 URL
+<pre>
+<code>
+GET /api/question
+</pre>
+</code>
+
+### RESPONSE
+
+
+
+## 답변
+### 전체조회
+### REQUEST
 URL
 <pre>
 <code>
