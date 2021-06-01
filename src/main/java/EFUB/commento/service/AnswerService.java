@@ -21,6 +21,12 @@ public class AnswerService {
     public List<Answer> getAnswer(Question question){
         return answerRepository.findAnswersByQuestion(question);
     }
+    public Answer getAnswerById(Long id){
+        return answerRepository.findAllById(id);
+    }
+    public List<Answer> getAll(){
+        return answerRepository.findAll();
+    }
 
     public void registerAnswer(AnswerDto answerDto){
         Answer answer=new Answer();
