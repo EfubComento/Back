@@ -1,3 +1,4 @@
+
 package EFUB.commento.domain;
 
 
@@ -6,15 +7,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "question")
-public class Question {
+@Table(name = "answer")
+public class Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id", nullable = false)
@@ -23,15 +23,10 @@ public class Question {
     @Column(name="company", nullable = false)
     private String company;
 
-    @Column(name="position", nullable = false)
-    private String position;
-
-    @Column(name="title", nullable = false)
-    private String title;
-
     @Column(name="content", nullable = false)
     private String content;
 
-    @OneToMany(mappedBy = "answer")
-    private List<Answer> answers=new ArrayList<Answer>();
+    @ManyToOne
+    @JoinColumn(name="question_id", nullable = false)
+    private Question question;
 }
