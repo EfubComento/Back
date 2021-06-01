@@ -310,15 +310,13 @@ Body
 |content|STRING|내용|
 
 ### RESPONSE
-Key
+key
 |Name|Type|Description|
 |------|---|---|
-|status|INTEGER|성공 200, 실패 400|
-
+|status|STRING|성공메시지|
 <pre>
 <code>
-SUCCESS { "code" : 200, "message" : "Success" }
-FAIL { "code" : 400, "message" : error.message }
+{"message" : "Success"}
 </code>
 </pre>
 
@@ -335,15 +333,14 @@ DELETE /api/bootcamp/{id}
 </pre>
 
 ### RESPONSE
-Key
+key
 |Name|Type|Description|
 |------|---|---|
-|status|INTEGER|성공 200, 실패 400|
+|status|STRING|성공메시지|
 
 <pre>
 <code>
-SUCCESS { "code" : 200, "message" : "Success" }
-FAIL { "code" : 400, "message" : error.message }
+{"message" : "Success"}
 </code>
 </pre>
 
