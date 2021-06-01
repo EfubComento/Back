@@ -2,9 +2,110 @@
 # Server
 
 # API 명세
+### 전체 포스트 불러옴
+### REQUEST
+URL
+<pre>
+<code>
+GET /api/post
+</code>
+</pre>
+
+### RESPONSE
+<pre>
+<code>
+[
+   {
+      "id":1,
+      "company":"삼성전기",
+      "department": "영업관리",
+      "question_content": "~~~",
+      "question_id":1,
+      "answer":[
+          {
+              "answer_id":1,
+     "answer_content:"한두달도 안된 동일 전형이라면 필터링 될 확률이 높습니다.
+ 인사담당자가 동일하기 때문에 분명히 기억할 겁니다."
+          }
+      ]
+   },
+   {
+      "id":2,
+      "company":"모든 회사",
+      "department": "모든 직무",
+      "question_content": "~~~",
+      "question_id":2
+      "answer":[
+          {
+              "answer_id":3,
+     "answer_content:"~~~",
+          },
+          {
+              "answer_id":4,
+     "answer_content:"~~~",
+          }
+      ]
+   }
+]
+</code>
+</pre>
 
 ## 답변
-### 조회
+### 전체조회
+### REQUEST
+URL
+URL
+<pre>
+<code>
+GET /api/answer
+</code>
+</pre>
+
+### RESPONSE
+<pre>
+<code>
+[
+   {
+      "id":1,
+      "company":"삼성전기",
+      "content": "한두달도 안된 동일 전형이라면 필터링 될 확률이 높습니다.
+ 인사담당자가 동일하기 때문에 분명히 기억할 겁니다.",
+      "question_content": "~~~",
+      "question_id":1,
+      "answer":[
+          {
+              "answer_id":1,
+     "answer_content:"~~~",
+          },
+          {
+              "answer_id":2,
+     "answer_content:"~~~",
+          }
+      ]
+   },
+   {
+      "id":2,
+      "company":"모든 회사",
+      "department": "모든 직무",
+      "question_content": "~~~",
+      "question_id":2
+      "answer":[
+          {
+              "answer_id":3,
+     "answer_content:"~~~",
+          },
+          {
+              "answer_id":4,
+     "answer_content:"~~~",
+          }
+      ]
+   }
+]
+</code>
+</pre>
+
+
+### 개별조회
 ### REQUEST
 URL
 <pre>
