@@ -235,7 +235,7 @@ key
 
 <pre>
 <code>
-{"message" : "Success"}
+return "Success"
 </code>
 </pre>
 
@@ -264,7 +264,7 @@ key
 
 <pre>
 <code>
-{"message" : "Success"}
+return "Success"
 </code>
 </pre>
 
@@ -285,7 +285,7 @@ key
 
 <pre>
 <code>
-{"message" : "Success"}
+return "Success"
 </code>
 </pre>
 
@@ -399,7 +399,7 @@ key
 
 <pre>
 <code>
-{"message" : "Success"}
+return "Success"
 </code>
 </pre>
 
@@ -420,7 +420,7 @@ key
 
 <pre>
 <code>
-{"message" : "Success"}
+return "Success"
 </code>
 </pre>
 
@@ -522,7 +522,7 @@ key
 |status|STRING|성공메시지|
 <pre>
 <code>
-{"message" : "Success"}
+return "Success"
 </code>
 </pre>
 
@@ -550,7 +550,7 @@ key
 
 <pre>
 <code>
-{"message" : "Success"}
+return "Success"
 </code>
 </pre>
 
@@ -571,7 +571,7 @@ key
 
 <pre>
 <code>
-{"message" : "Success"}
+return "Success"
 </code>
 </pre>
 
