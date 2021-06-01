@@ -32,6 +32,7 @@ public class Question {
     @Column(name="content", nullable = false)
     private String content;
 
-    @OneToMany(mappedBy = "answer")
-    private List<Answer> answers=new ArrayList<Answer>();
+//    @OneToMany(mappedBy = "answer")
+//    //private List<Answer> answers=new ArrayList<Answer>();
+//    private List<Answer> anwsers;
 }

@@ -19,7 +19,7 @@ public class AnswerService {
 
 
     public List<Answer> getAnswer(Question question){
-        return answerRepository.getAnswer(question);
+        return answerRepository.findAnswersByQuestion(question);
     }
 
     public void registerAnswer(AnswerDto answerDto){
