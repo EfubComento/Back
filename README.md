@@ -133,8 +133,19 @@ URL
 GET /api/question/{id}
 </code>
 </pre>
+id -> 질문 아이디
 
 ### RESPONSE
+
+|Name|Type|Description|
+|------|---|---|
+|id|INTEGER|질문아이디|
+|company|STRING|회사|
+|position|STRING|직무|
+|title|STRING|제목|
+|content|STRING|내용|
+
+
 <pre>
 <code>
 {
@@ -147,6 +158,57 @@ GET /api/question/{id}
 </code>
 </pre>
 
+### 회사/직무로 조회
+### REQUEST
+URL
+<pre>
+<code>
+GET /api/question
+</code>
+</pre>
+
+ex /api/question?company=모든회사&position=모든직무
+
+**REQUEST PARAM**
+|Name|Type|Description|
+|------|---|---|
+|company|STRING|회사|
+|position|STRING|직무|
+
+### RESPONSE
+
+LIST
+|Name|Type|Description|
+|------|---|---|
+|id|INTEGER|질문아이디|
+|company|STRING|회사|
+|position|STRING|직무|
+|title|STRING|제목|
+|content|STRING|내용|
+
+
+<pre>
+<code>
+
+[
+    {
+        "id": 2,
+        "company": "모든회사",
+        "position": "모든직무",
+        "title": "입사시 제약사 RA업무 배정이 궁금합니다.",
+        "content": "안녕하세요, 이번에 RA직무로 최종합격했습니다.\n-신제품 기획개발\n-허가 및 발매, 허가 변경 등 사후 관리 업무\n-RA consulting\n-약사법, 의약품 안전규칙, 규정 f/u\n\n이렇게 되어있는데 입사하게 되면 저 업무를 다 하게 되는건가요 아니면 저 중에 입사동기들이 각각 몇개씩 배정받아 담당으로 하게되나요? 저는 허가발매쪽을 하고 싶은데 혹시 기획개발 쪽만 하게 될까봐 걱정되네요"
+    },
+    {
+        "id": 3,
+        "company": "모든회사",
+        "position": "모든직무",
+        "title": "금융권 IT 임원 면접 준비",
+        "content": "안녕하세요\n금융권을 딱 하나 썼는데 임원 면접을 준비 중입니다. 평소 금융권에 관심도 없었고 해당 회사를 사용해본 적도 없습니다. 금융권은 특히 로열티를 많이 본다는데 어떻게 관심을 표현해야 할까요....? 지금이랑 해당 회사 입출금 통장이라도 하나 만들까요? 금융권에 관심이 전혀 없었지만 면접에서는 관심 있어 왔던 척 해야하는게 맞는거죠?"
+    }
+]
+</code>
+</pre>
+
 ### 생성
 ### REQUEST
 URL
@@ -155,6 +217,15 @@ URL
 POST /api/question
 </code>
 </pre>
+
+**REQUEST BODY**
+|Name|Type|Description|
+|------|---|---|
+|company|STRING|회사|
+|position|STRING|직무|
+|title|STRING|제목|
+|content|STRING|내용|
+
 
 ### RESPONSE
 key
@@ -176,6 +247,14 @@ URL
 PUT /api/question/{id}
 </code>
 </pre>
+
+**REQUEST BODY**
+|Name|Type|Description|
+|------|---|---|
+|company|STRING|회사|
+|position|STRING|직무|
+|title|STRING|제목|
+|content|STRING|내용|
 
 ### RESPONSE
 key
@@ -357,6 +436,14 @@ GET /api/bootcamp
 </pre>
 
 ### RESPONSE
+**LIST**
+|Name|Type|Description|
+|------|---|---|
+|id|INTEGER|캠프번호|
+|image|STRING|이미지URL|
+|category|STRING|직무카테고리|
+|content|STRING|내용|
+
 <pre>
 <code>
 [
@@ -420,12 +507,13 @@ POST /api/bootcamp
 </code>
 </pre>
 
-Body
+**REQUEST BODY**
 |Name|Type|Description|
 |------|---|---|
 |image|STRING|이미지URL|
 |category|STRING|직무카테고리|
 |content|STRING|내용|
+
 
 ### RESPONSE
 key
@@ -446,6 +534,13 @@ URL
 PUT /api/bootcamp/{id}
 </code>
 </pre>
+
+**REQUEST BODY**
+|Name|Type|Description|
+|------|---|---|
+|image|STRING|이미지URL|
+|category|STRING|직무카테고리|
+|content|STRING|내용|
 
 ### RESPONSE
 key
