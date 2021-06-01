@@ -13,6 +13,7 @@ GET /api/post
 </pre>
 
 ### RESPONSE
+
 <pre>
 <code>
 [
@@ -101,6 +102,7 @@ GET /api/question
 </code>
 
 ### RESPONSE
+
 <pre>
 <code>
 [
