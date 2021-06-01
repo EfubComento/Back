@@ -24,6 +24,7 @@ GET /api/post
       "question_id":1,
       "answer":{
          "answer_id":1,
+         "answer_company" : "삼성전기",
          "answer_content":"한두달도 안된 동일 전형이라면 필터링 될 확률이 높습니다. 인사담당자가 동일하기 때문에 분명히 기억할 겁니다."
       }
    },
@@ -35,6 +36,7 @@ GET /api/post
       "question_id":2,
       "answer":{
          "answer_id":2,
+         "answer_company" : "대원제약",
          "answer_content":"네 입사하게 되면 저 업무를 모두다 하게 됩니다. 애초에 어지간히 큰회사가 아닌 이상은 RA직무 신입의 경우 1명 아니면 2명을 뽑기 때문에 입사동기가 있기도 힘들어요. 제품 하나 맡아서 기획개발부터 허가발매까지 쭉이어 나가게 됩니다. 본인이 PM이 되어서 끌고 가신다고 보면 됩니다. 허가변경 등 사후관리 업무는 병행하는것이구요. 규정 팔로우업 하는것도 기본인 것이구요."
       }
    },
@@ -47,10 +49,12 @@ GET /api/post
       "answer":[
          {
             "answer_id":3,
+            "answer_company" : "한국투자공사",
             "answer_content":"안녕하세요, 금융IT 재직자입니다. 당연히 금융에 대해 관심이 많은 것처럼 포장하셔야합니다. 그리고 팁을 드리자면 씩씩한 자세로 큰소리로 답변하시는걸 추천드립니다."
          },
          {
             "answer_id":4,
+            "answer_company" : "",
             "answer_content":"안녕하세요. 벼락치기라도 하셔서 해당 금융사의 서비스를 이용해보시는 것이 좋습니다. 최근 DT사업을 많이 진행하면서 해당 회사의 서비스들에 대한 질문들이 많이 나오고 있습니다. 엔지니어로 그런 부분까지 관심을 갖기가 쉽지는 않겠지만 그럼에도 약간의 서비스를 알아보고 가시는 것이 좋을 것 같습니다. 굳이 입출금통장을 만들기 위해서 지점을 방문하시지는 않아도 될 것 같습니다. 감사합니다."
          }
       ]
@@ -340,15 +344,16 @@ URL
 GET /api/answer/{id}
 </code>
 </pre>
+id-> 답변 아이디
 
 ### RESPONSE
 Key
 |Name|Type|Description|
 |------|---|---|
-|id|INTEGER|캠프번호|
+|id|INTEGER|답변 아이디|
 |company|STRING|회사|
 |content|STRING|내용|
-|question_id|STRING|질문아이디|
+|question_id|INTEGER|질문아이디|
 
 <pre>
 <code>
@@ -370,6 +375,14 @@ POST /api/answer
 </code>
 </pre>
 
+
+**REQUEST BODY**
+|Name|Type|Description|
+|------|---|---|
+|company|STRING|회사|
+|content|STRING|내용|
+|question_id|INTEGER|질문 아이디|
+
 ### RESPONSE
 key
 |Name|Type|Description|
@@ -378,7 +391,7 @@ key
 
 <pre>
 <code>
-{"message" : "Success"}
+return "Success"
 </code>
 </pre>
 
@@ -390,6 +403,13 @@ URL
 PUT /api/answer/{id}
 </code>
 </pre>
+
+**REQUEST BODY**
+|Name|Type|Description|
+|------|---|---|
+|company|STRING|회사|
+|content|STRING|내용|
+|question_id|INTEGER|질문 아이디|
 
 ### RESPONSE
 key
