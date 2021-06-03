@@ -4,6 +4,7 @@ import EFUB.commento.domain.Camp;
 import EFUB.commento.domain.CampRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -13,6 +14,10 @@ public class CampService {
 
     public CampService(CampRepository campRepository) {
         this.campRepository = campRepository;
+    }
+
+    public List<Camp> getAllBootCamp(){
+        return campRepository.findAll();
     }
 
     public Camp getBootCamp(Long id) {

@@ -32,7 +32,7 @@ public class Question {
     @Column(name="content", nullable = false)
     private String content;
 
-//    @OneToMany(mappedBy = "answer")
-//    //private List<Answer> answers=new ArrayList<Answer>();
-//    private List<Answer> anwsers;
+    @OneToMany(fetch=FetchType.EAGER)
+    @JoinColumn(name="question_id")
+    private List<Answer> anwsers;
 }

@@ -13,7 +13,6 @@ import lombok.ToString;
 public class AnswerDto {
     private String company;
     private String content;
-    private QuestionDto questionDto;
-    private Question question;
+    private Long questionId;
 
 }

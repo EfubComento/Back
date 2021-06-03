@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class QuestionService {
@@ -19,8 +20,26 @@ public class QuestionService {
         this.questionRepository = questionRepository;
     }
 
+    public List<Question> getAllPost(){
+        return questionRepository.findAll();
+    }
+
+    public Question getOnePost(Long id){
+        return questionRepository.findOneById(id);
+    }
+
     public List<Question> getAllQuestionByCompany(String company, String position) {
         return questionRepository.findAllByCompanyAndPosition(company, position);
+    }
+
+    public QuestionDto getOneQuestion(Long id) {
+        Question question = questionRepository.findOneById(id);
+        return QuestionDto.of(question);
+    }
+
+    public List<QuestionDto> getAllQuestion() {
+        List<Question> questions = questionRepository.findAll();
+        return questions.stream().map(it -> QuestionDto.of(it)).collect(Collectors.toList());
     }
 
     public void registerQuestion(QuestionDto questionDto) {

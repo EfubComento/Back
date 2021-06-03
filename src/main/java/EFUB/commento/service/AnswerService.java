@@ -2,7 +2,6 @@ package EFUB.commento.service;
 
 import EFUB.commento.domain.Answer;
 import EFUB.commento.domain.AnswerRepository;
-import EFUB.commento.domain.Question;
 import EFUB.commento.dto.AnswerDto;
 import org.springframework.stereotype.Service;
 
@@ -18,9 +17,9 @@ public class AnswerService {
     }
 
 
-    public List<Answer> getAnswer(Question question){
-        return answerRepository.findAnswersByQuestion(question);
-    }
+//    public List<Answer> getAnswer(Long questionId){
+//        return answerRepository.findAllByQuestion_Id(questionId);
+//    }
     public Answer getAnswerById(Long id){
         return answerRepository.findAllById(id);
     }
@@ -32,7 +31,7 @@ public class AnswerService {
         Answer answer=new Answer();
         answer.setCompany(answerDto.getCompany());
         answer.setContent(answerDto.getContent());
-        answer.setQuestion(answerDto.getQuestion());
+        answer.setQuestion_id(answerDto.getQuestionId());
 
         answerRepository.save(answer);
     }
@@ -47,7 +46,7 @@ public class AnswerService {
         originalAnswer.ifPresent(selectAnswer ->{
             selectAnswer.setCompany(newAnswer.getCompany());
             selectAnswer.setContent(newAnswer.getContent());
-            selectAnswer.setQuestion(newAnswer.getQuestion());
+            selectAnswer.setQuestion_id(newAnswer.getQuestion_id());
             answerRepository.save(selectAnswer);
         });    }
 

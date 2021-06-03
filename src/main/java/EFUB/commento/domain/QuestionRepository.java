@@ -8,4 +8,5 @@ import java.util.List;
 @Repository
 public interface QuestionRepository extends JpaRepository<Question, Long> {
     List<Question> findAllByCompanyAndPosition(String company, String position);
+    Question findOneById(Long id);
 }

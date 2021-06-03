@@ -26,7 +26,10 @@ public class Answer {
     @Column(name="content", nullable = false)
     private String content;
 
-    @ManyToOne
-    @JoinColumn(name="question_id", nullable = false)
-    private Question question;
+    @Column(name="question_id")
+    private Long question_id;
+
+//    @ManyToOne
+//    @JoinColumn(name="question_id", nullable = false)
+//    private Question question;
 }
